@@ -1,0 +1,85 @@
+.about, .skills{
+  margin:20px;
+}
+.projects{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+}
+.projects img{
+  width: 30%;
+  border-radius: 10px;
+}
+@media (max-width: 768px){
+  .projects img{
+    width:45%;
+  }
+}
+@media (max-width: 480px){
+  .projects img{
+    width:100%;
+  }
+}
+
+/*INDEX PAGE*/
+/*BODY*/
+body {
+  background-color: #fff6f6;
+  color: white;
+}
+/*NAVBAR*/
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 60px;
+}
+/* NAV LINKS */
+.nav-bar {
+  margin: 0 15px;
+  text-decoration: none;
+  color: #ccc;
+  font-size: 14px;
+  transition: 0.3s;
+}
+.nav-bar: hover{
+  color:#d95f76;
+}
+.main-title{
+  font-family:'San Fransisco', sans-serif;
+  font-size: 60px;
+  color:#d95f76;
+}
+.main-text{
+  font-family:'San Fransisco', sans-serif;
+  font-size: 50px;
+  color:#d95f76;
+}
+
+/* PROJECT BUTTON */
+.projects-btn {
+  margin-top: 30px;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 12px;
+  background: linear-gradient(45deg, #f1b6fd, #d95f76);
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+}
+/* CONTACT BUTTON */
+.contact-btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(45deg, #f1b6fd, #d95f76);
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+}
+ 
+ nav a:hover {
+  color: #d95f76;
+}
+
