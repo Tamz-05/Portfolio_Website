@@ -21,20 +21,23 @@
     width:100%;
   }
 }
+/*FOOTER*/
+.footer {
+    text-align: center;
+    padding: 20px;
 
+    background: linear-gradient(to right, #f7c0ca, #d95f76);
+
+    color: white;
+    margin-top: 40px;
+}
 /*INDEX PAGE*/
 /*BODY*/
 body {
-  background-color: #fff6f6;
+  background-color: #fdcaca;
   color: white;
 }
-/*NAVBAR*/
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px 60px;
-}
+
 /* NAV LINKS */
 .nav-bar {
   margin: 0 15px;
@@ -46,6 +49,28 @@ header {
 .nav-bar: hover{
   color:#d95f76;
 }
+.nav-bar{
+  font-family:'San Fransisco', sans-serif;
+  font-size: 30px;
+  color:#d95f76;
+}
+.nav-bar {
+  display: flex;
+  gap: 40px; 
+}
+
+/* CONTACT BUTTON */
+.contact-btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(45deg, #f1b6fd, #d95f76);
+  color: white;
+  cursor: pointer;
+  font-size:30px;
+  font-weight: bold;
+}
+ 
 .main-title{
   font-family:'San Fransisco', sans-serif;
   font-size: 60px;
@@ -68,18 +93,36 @@ header {
   font-size: 20px;
   cursor: pointer;
 }
-/* CONTACT BUTTON */
-.contact-btn {
-  padding: 10px 20px;
-  border: none;
-  border-radius: 10px;
-  background: linear-gradient(45deg, #f1b6fd, #d95f76);
-  color: white;
-  cursor: pointer;
-  font-weight: bold;
+ /*PROFILE STUFF*/
+ /* IMAGE SIDE */
+.profile-pic {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+     border: 5px solid #d95f76;
 }
- 
- nav a:hover {
-  color: #d95f76;
+* HERO SECTION */
+.main_text {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px;
 }
 
+/* TEXT SIDE */
+.main_text {
+    max-width: 50%;
+}
+
+.main_text {
+    font-size: 40px;
+    margin: 10px 0;
+}
+
+.about {
+    background-color: #d95f76;
+    color: rgb(255, 255, 255);
+    padding: 5px 10px;
+    display: inline-block;
+    margin-bottom: 10px;
+}
