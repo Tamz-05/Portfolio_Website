@@ -1,59 +1,217 @@
-.about, .skills{
-  margin:20px;
-}
-.projects{
-  display: flex;
-  flex-wrap: wrap;
-  gap: 15px;
-  justify-content: center;
-}
-.projects img{
-  width: 30%;
-  border-radius: 10px;
-}
-@media (max-width: 768px){
-  .projects img{
-    width:45%;
-  }
-}
-@media (max-width: 480px){
-  .projects img{
-    width:100%;
-  }
-}
-/*FOOTER*/
-.footer {
-    text-align: center;
-    padding: 20px;
-
-    background: linear-gradient(to right, #f7c0ca, #d95f76);
-
-    color: white;
-    margin-top: 20px;
-    position: sticky;
-}
-/*INDEX PAGE*/
-/*BODY*/
+/* =========================================
+   1. GENERAL STYLES & BODY
+   ========================================= */
 body {
   background-color: #fdcaca;
   color: white;
 }
 
-
-.main-title{
-  font-family:'San Fransisco', sans-serif;
+/* Common text formatting */
+.main-title {
+  font-family: 'San Fransisco', sans-serif;
   font-size: 30px;
-  color:#d95f76;
+  color: #d95f76;
   margin-top: 50px;
 }
-.main-text{
-  font-family:'San Fransisco', sans-serif;
+
+.main-text {
+  font-family: 'San Fransisco', sans-serif;
   font-size: 30px;
-  color:#d95f76;
+  color: #d95f76;
   text-align: center;
 }
 
-/* PROJECT BUTTON */
+/* =========================================
+   2. NAVIGATION BAR
+   ========================================= */
+.nav-bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0;
+  background-color: #d95f76;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.nav-bar a {
+  text-decoration: none;
+}
+
+.nav-bar button {
+  background-color: transparent;
+  color: #000000;
+  border: 2px solid transparent;
+  padding: 10px 20px;
+  margin: 0 10px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.nav-bar button:hover {
+  color: #d95f76;
+  background-color: #f0f7ff;
+}
+
+.contact-btn {
+  background-color: #d83452;
+  color: white;
+  border: none;
+}
+
+.contact-btn:hover {
+  background-color: #d83452;
+  transform: scale(1.05);
+}
+
+/* =========================================
+   3. HERO & PROFILE SECTION
+   ========================================= */
+.main_text {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 50px;
+  max-width: 50%;
+  font-size: 40px; /* Note: Re-check this, you had multiple sizes for main_text */
+  margin: 10px 0;
+  color: #000000;
+}
+
+.profile-pic {
+  display: block;
+  margin: 30px auto;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: 5px solid #d95f76;
+  box-shadow: 0 10px 20px rgba(216, 52, 82, 0.1);
+  object-fit: cover;
+}
+
+/* =========================================
+   4. ABOUT & SKILLS
+   ========================================= */
+.about {
+  max-width: 800px;
+  margin: 60px auto;
+  padding: 5px 10px;
+  text-align: center;
+  background-color: #d95f76;
+  color: rgb(255, 255, 255);
+  display: inline-block;
+}
+
+.about span {
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #d83452;
+  letter-spacing: 1px;
+  font-size: 0.9rem;
+}
+
+.skills {
+  max-width: 600px;
+  margin: 40px auto;
+  text-align: center;
+}
+
+.skills h2 {
+  margin-bottom: 20px;
+}
+
+.skills p {
+  display: inline-block;
+  background: #e9e2f0;
+  padding: 8px 18px;
+  margin: 5px;
+  border-radius: 50px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: background 0.3s;
+}
+
+.skills p:hover {
+  background: #d83452;
+  color: white;
+}
+/* =========================================
+   5. SKILLS SECTION (Updated Text Color)
+   ========================================= */
+.skills {
+  max-width: 600px;
+  margin: 40px auto;
+  text-align: center;
+}
+
+.skills h2 {
+  margin-bottom: 20px;
+  color: #000000; /* Ensures the heading is also black */
+}
+
+/* This turns your <p> skills into pretty tags */
+.skills p {
+  display: inline-block;
+  background: #e9e2f0;
+  padding: 8px 18px;
+  margin: 5px;
+  border-radius: 50px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  
+  /* Text color changed to black */
+  color: #000000; 
+  
+  transition: all 0.3s ease;
+}
+
+.skills p:hover {
+  background: #d83452;
+  
+  /* Text changes to white on hover for contrast */
+  color: #ffffff; 
+  
+  transform: translateY(-3px);
+  box-shadow: 0 4px 10px rgba(216, 52, 82, 0.2);
+}
+/* =========================================
+   5. PROJECTS SECTION (Updated with Glow)
+   ========================================= */
+.projects {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+  padding: 20px;
+}
+
+.projects img {
+  width: 300px;
+  margin: 15px;
+  border-radius: 15px;
+  border: 2px solid white;
+  
+  /* Smooth transition for the glow and lift */
+  transition: all 0.4s ease-in-out;
+  cursor: pointer;
+}
+
+/* Hover & Glow Effect */
+.projects img:hover {
+  /* Lifts the image slightly */
+  transform: translateY(-10px) scale(1.02);
+  
+  /* Creates the glow effect using your theme color */
+  border-color: #f1b6fd;
+  box-shadow: 0 0 20px 5px rgba(217, 95, 118, 0.6), 
+              0 0 40px 10px rgba(241, 182, 253, 0.3);
+}
+
 .projects-btn {
   margin-top: 30px;
   padding: 15px 30px;
@@ -63,160 +221,75 @@ body {
   color: white;
   font-size: 20px;
   cursor: pointer;
-}
-.projects h1{
-  padding-top: 50px;
-}
-/*PROJECT ARRANGMENT STUFF*/
-.projects{
-  display: flex;
-  flex-wrap:wrap ;
-  justify-content: center;
-  padding: 20px;
-
-}
-.projects img{
-  width: 300px;
-  margin: 15px;
-  border-radius:15px ;
-  border: 2px solid white ;
-
-}
- /*PROFILE STUFF*/
- /* IMAGE SIDE */
-.profile-pic {
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-     border: 5px solid #d95f76;
-}
-* HERO SECTION */
-.main_text {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 50px;
+  transition: transform 0.3s ease;
 }
 
-/* TEXT SIDE */
-.main_text {
-    max-width: 50%;
+/* Optional: Slight glow on the button too */
+.projects-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(241, 182, 253, 0.8);
 }
 
-.main_text {
-    font-size: 40px;
-    margin: 10px 0;
-}
-
-.about {
-    background-color: #d95f76;
-    color: rgb(255, 255, 255);
-    padding: 5px 10px;
-    display: inline-block;
-
-    margin-bottom: 10px;
-}
-/*CONTACT*/
+/* =========================================
+   6. CONTACT PAGE
+   ========================================= */
 .contact-form {
-    background: white;
-    padding: 30px;
-    border-radius: 12px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.05); /* Very soft shadow */
-    width: 100%;
-    max-width: 400px;
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+  width: 100%;
+  max-width: 400px;
 }
 
-/* Styling the Labels */
 label {
-    display: block;
-    margin-bottom: 8px;
-    font-weight: 600;
-    color: #333;
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #333;
 }
 
-/* Styling the Inputs and Textarea */
 input, textarea {
-    width: 100%;
-    padding: 12px;
-    margin-bottom: 20px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    font-size: 16px;
-    box-sizing: border-box; /* Crucial: keeps padding inside the width */
-    transition: border-color 0.3s ease;
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 16px;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease;
 }
 
-/* Highlighting the input when clicked */
 input:focus, textarea:focus {
-    outline: none;
-    border-color: #d95f76;
+  outline: none;
+  border-color: #d95f76;
 }
 
-/* The Button */
 button {
-    width: 100%;
-    padding: 12px;
-    background-color: #d95f76;
-    color: white;
-    border: none;
-    border-radius: 8px;
-    font-size: 16px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: background 0.3s ease;
+  width: 100%;
+  padding: 12px;
+  background-color: #d95f76;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease;
 }
 
 button:hover {
-    background-color: #bd445a;
+  background-color: #bd445a;
 }
 
-/*NAVBAR TAKE 2*/
-/* 1. Container for the whole bar */
-.nav-bar {
-    display: flex;
-    justify-content: center; 
-    align-items: center;
-    padding: 20px 0;
-    background-color: #d95f76; 
-    box-shadow: 0 2px 10px rgba(0,0,0,0.05); 
-    position: sticky; 
-    top: 0;
-    z-index: 1000;
-}
-
-/* 2. Styling the buttons */
-.nav-bar button {
-    background-color: transparent;
-    color: #000000;
-    border: 2px solid transparent;
-    padding: 10px 20px;
-    margin: 0 10px;
-    font-size: 16px;
-    font-weight: 600;
-    cursor: pointer;
-    border-radius: 8px; /* Rounded corners */
-    transition: all 0.3s ease; /* Smooth color change */
-}
-
-/* 3. Hover effects */
-.nav-bar button:hover {
-    color: #d95f76; 
-    background-color: #f0f7ff; 
-}
-
-/* 4. Special styling for the "Contact" button */
-.contact-btn {
-    background-color: #d83452; 
-    color: white;
-    border: none;
-}
-
-.contact-btn:hover {
-    background-color: #d83452;
-    transform: scale(1.05); /* Slightly grows when hovered */
-}
-
-/* 5. Clean up the links */
-.nav-bar a {
-    text-decoration: none;
+/* =========================================
+   7. FOOTER
+   ========================================= */
+.footer {
+  text-align: center;
+  padding: 20px;
+  background: linear-gradient(to right, #f7c0ca, #d95f76);
+  color: white;
+  margin-top: 20px;
+  position: sticky;
 }
