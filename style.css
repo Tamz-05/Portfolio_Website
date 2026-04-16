@@ -29,7 +29,8 @@
     background: linear-gradient(to right, #f7c0ca, #d95f76);
 
     color: white;
-    margin-top: 40px;
+    margin-top: 20px;
+    position: sticky;
 }
 /*INDEX PAGE*/
 /*BODY*/
@@ -39,27 +40,75 @@ body {
 }
 
 /* NAV LINKS */
+.nav-bar{
+  background:white ;
+  padding: 10px;
+  text-align: center;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index:1000 ;
+  height: 10px;
+  line-height: 10px;
+  margin-bottom: 50px;
+   background: linear-gradient(to right, #f7c0ca, #d95f76);
+}
 .nav-bar {
   margin: 0 15px;
   text-decoration: none;
   color: #ccc;
-  font-size: 14px;
+  font-size: 20px;
   transition: 0.3s;
+  text-align: center;
 }
 .nav-bar: hover{
   color:#d95f76;
+  
 }
 .nav-bar{
   font-family:'San Fransisco', sans-serif;
   font-size: 30px;
   color:#d95f76;
+  text-align: center;
 }
 .nav-bar {
   display: flex;
   gap: 40px; 
+  text-align: center;
 }
 
-/* CONTACT BUTTON */
+/* BUTTONS */
+.home-btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(45deg, #f1b6fd, #d95f76);
+  color: white;
+  cursor: pointer;
+  font-size:30px;
+  font-weight: bold;
+}
+.profile-btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(45deg, #f1b6fd, #d95f76);
+  color: white;
+  cursor: pointer;
+  font-size:30px;
+  font-weight: bold;
+}
+.projects-btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(45deg, #f1b6fd, #d95f76);
+  color: white;
+  cursor: pointer;
+  font-size:30px;
+  font-weight: bold;
+}
 .contact-btn {
   padding: 10px 20px;
   border: none;
@@ -73,13 +122,15 @@ body {
  
 .main-title{
   font-family:'San Fransisco', sans-serif;
-  font-size: 60px;
+  font-size: 30px;
   color:#d95f76;
+  margin-top: 50px;
 }
 .main-text{
   font-family:'San Fransisco', sans-serif;
-  font-size: 50px;
+  font-size: 30px;
   color:#d95f76;
+  text-align: center;
 }
 
 /* PROJECT BUTTON */
@@ -92,6 +143,24 @@ body {
   color: white;
   font-size: 20px;
   cursor: pointer;
+}
+.projects h1{
+  padding-top: 50px;
+}
+/*PROJECT ARRANGMENT STUFF*/
+.projects{
+  display: flex;
+  flex-wrap:wrap ;
+  justify-content: center;
+  padding: 20px;
+
+}
+.projects img{
+  width: 300px;
+  margin: 15px;
+  border-radius:15px ;
+  border: 2px solid white ;
+
 }
  /*PROFILE STUFF*/
  /* IMAGE SIDE */
@@ -124,5 +193,6 @@ body {
     color: rgb(255, 255, 255);
     padding: 5px 10px;
     display: inline-block;
+
     margin-bottom: 10px;
 }
