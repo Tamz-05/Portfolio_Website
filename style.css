@@ -4,21 +4,19 @@
 body {
   background-color: #fdcaca;
   color: white;
+  margin: 0; /* Prevents white gaps at the edges */
+  font-family: 'San Fransisco', sans-serif;
 }
 
 /* Common text formatting */
-.main-title {
-  font-family: 'San Fransisco', sans-serif;
-  font-size: 30px;
-  color: #d95f76;
-  margin-top: 50px;
-}
-
-.main-text {
-  font-family: 'San Fransisco', sans-serif;
+.main-title, .main-text {
   font-size: 30px;
   color: #d95f76;
   text-align: center;
+}
+
+.main-title {
+  margin-top: 50px;
 }
 
 /* =========================================
@@ -65,33 +63,55 @@ body {
 }
 
 .contact-btn:hover {
-  background-color: #d83452;
+  background-color: #d83452 !important;
   transform: scale(1.05);
 }
 
 /* =========================================
-   3. HERO & PROFILE SECTION
+   3. HERO & PROFILE SECTION (Full Width)
    ========================================= */
 .main_text {
   display: flex;
   align-items: center;
+  justify-content: center;   /* Centers the content box */
+  width: 100%;               /* Pink background spans full width */
+  background-color: #d95f76; 
+  padding: 60px 0;
+  margin: 0;
+  color: #000000;            /* Main hero text is black */
+}
+
+/* Use this wrapper in your HTML to keep text & image aligned */
+.main_text_content {
+  display: flex;
+  align-items: center;
   justify-content: space-between;
-  padding: 50px;
-  max-width: 50%;
-  font-size: 40px; /* Note: Re-check this, you had multiple sizes for main_text */
-  margin: 10px 0;
-  color: #000000;
+  width: 90%;
+  max-width: 1200px;
+  gap: 40px;
+}
+
+.hero-description {
+  flex: 1;
+  font-size: 40px;
 }
 
 .profile-pic {
-  display: block;
-  margin: 30px auto;
-  width: 200px;
-  height: 200px;
+  display:block;
+  margin-left: auto;
+  margin-right:auto;
+  width: 250px;
+  height: 250px;
   border-radius: 50%;
-  border: 5px solid #d95f76;
-  box-shadow: 0 10px 20px rgba(216, 52, 82, 0.1);
+  border: 5px solid #ffffff;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
   object-fit: cover;
+  transition: all 0.4s ease-in-out;
+}
+
+.profile-pic:hover {
+  transform: scale(1.1);      
+  box-shadow: 0 0 25px 8px rgba(255, 255, 255, 0.6);
 }
 
 /* =========================================
@@ -100,19 +120,12 @@ body {
 .about {
   max-width: 800px;
   margin: 60px auto;
-  padding: 5px 10px;
+  padding: 20px;
   text-align: center;
   background-color: #d95f76;
-  color: rgb(255, 255, 255);
-  display: inline-block;
-}
-
-.about span {
-  font-weight: 700;
-  text-transform: uppercase;
-  color: #d83452;
-  letter-spacing: 1px;
-  font-size: 0.9rem;
+  color: #ffffff;
+  display: block;
+  border-radius: 15px;
 }
 
 .skills {
@@ -122,6 +135,7 @@ body {
 }
 
 .skills h2 {
+  color: #000000; /* Black text */
   margin-bottom: 20px;
 }
 
@@ -133,54 +147,19 @@ body {
   border-radius: 50px;
   font-size: 0.9rem;
   font-weight: 600;
-  transition: background 0.3s;
+  color: #000000; /* Black text */
+  transition: all 0.3s ease-in-out;
 }
 
 .skills p:hover {
   background: #d83452;
-  color: white;
+  color: #ffffff;
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(216, 52, 82, 0.4);
 }
+
 /* =========================================
-   5. SKILLS SECTION (Updated Text Color)
-   ========================================= */
-.skills {
-  max-width: 600px;
-  margin: 40px auto;
-  text-align: center;
-}
-
-.skills h2 {
-  margin-bottom: 20px;
-  color: #000000; /* Ensures the heading is also black */
-}
-
-/* This turns your <p> skills into pretty tags */
-.skills p {
-  display: inline-block;
-  background: #e9e2f0;
-  padding: 8px 18px;
-  margin: 5px;
-  border-radius: 50px;
-  font-size: 0.9rem;
-  font-weight: 600;
-  
-  /* Text color changed to black */
-  color: #000000; 
-  
-  transition: all 0.3s ease;
-}
-
-.skills p:hover {
-  background: #d83452;
-  
-  /* Text changes to white on hover for contrast */
-  color: #ffffff; 
-  
-  transform: translateY(-3px);
-  box-shadow: 0 4px 10px rgba(216, 52, 82, 0.2);
-}
-/* =========================================
-   5. PROJECTS SECTION (Updated with Glow)
+   5. PROJECTS SECTION (With Hover & Glow)
    ========================================= */
 .projects {
   display: flex;
@@ -190,30 +169,31 @@ body {
   padding: 20px;
 }
 
+.projects h1 {
+  padding-top: 50px;
+  width: 100%;
+  text-align: center;
+}
+
 .projects img {
   width: 300px;
   margin: 15px;
   border-radius: 15px;
   border: 2px solid white;
-  
-  /* Smooth transition for the glow and lift */
-  transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out; /* Crucial for smooth hover */
   cursor: pointer;
 }
 
-/* Hover & Glow Effect */
 .projects img:hover {
-  /* Lifts the image slightly */
   transform: translateY(-10px) scale(1.02);
-  
-  /* Creates the glow effect using your theme color */
   border-color: #f1b6fd;
   box-shadow: 0 0 20px 5px rgba(217, 95, 118, 0.6), 
               0 0 40px 10px rgba(241, 182, 253, 0.3);
 }
 
 .projects-btn {
-  margin-top: 30px;
+  margin: 30px auto;
+  display: block;
   padding: 15px 30px;
   border: none;
   border-radius: 12px;
@@ -221,10 +201,9 @@ body {
   color: white;
   font-size: 20px;
   cursor: pointer;
-  transition: transform 0.3s ease;
+  transition: all 0.3s ease;
 }
 
-/* Optional: Slight glow on the button too */
 .projects-btn:hover {
   transform: scale(1.05);
   box-shadow: 0 0 15px rgba(241, 182, 253, 0.8);
@@ -234,19 +213,18 @@ body {
    6. CONTACT PAGE
    ========================================= */
 .contact-form {
-  background: white;
+  background: transparent; 
   padding: 30px;
-  border-radius: 12px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
   width: 100%;
-  max-width: 400px;
+  max-width: 100px;
+  margin: 0 auto;
 }
 
 label {
   display: block;
   margin-bottom: 8px;
   font-weight: 600;
-  color: #333;
+  color: #000000; /* Black text */
 }
 
 input, textarea {
@@ -255,31 +233,8 @@ input, textarea {
   margin-bottom: 20px;
   border: 1px solid #ddd;
   border-radius: 8px;
-  font-size: 16px;
+  background-color: white;
   box-sizing: border-box;
-  transition: border-color 0.3s ease;
-}
-
-input:focus, textarea:focus {
-  outline: none;
-  border-color: #d95f76;
-}
-
-button {
-  width: 100%;
-  padding: 12px;
-  background-color: #d95f76;
-  color: white;
-  border: none;
-  border-radius: 8px;
-  font-size: 16px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: background 0.3s ease;
-}
-
-button:hover {
-  background-color: #bd445a;
 }
 
 /* =========================================
@@ -291,5 +246,11 @@ button:hover {
   background: linear-gradient(to right, #f7c0ca, #d95f76);
   color: white;
   margin-top: 20px;
-  position: sticky;
+}
+
+/* Responsive Fixes */
+@media (max-width: 768px) {
+  .main_text_content { flex-direction: column; text-align: center; }
+  .hero-description { font-size: 28px; }
+  .projects img { width: 80%; }
 }
